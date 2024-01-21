@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="download.png" class="logo">
+            </nav>
+            <div class="header-text">
+                <p>UI Desiner & Java Developer</p>
+                <h1>Hi, I'm  <span>Shreyash</span><br>From India</h1>
+            </div>
+        </div>
+    </div>
+<!------about-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images.jpeg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About me</h1>
+                    <p>
+                        Dynamic and passionate Java developer with a strong interest in cloud computing and AWS services. Skilled in developing robust and efficient
+                        applications using Java and utilizing AWS technologies. Demonstrated ability to learn new technologies quickly and collaborate effectively in team
+                        environments. Seeking an opportunity to contribute my skills and knowledge to create innovative solutions in Java development and AWS cloud
+                        architecture.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Desining Web/App Interfaces</li>
+                            <li><span>Java</span><br>Desining Core Java Applications</li>
+                            <li><span>AWS</span><br>Associate Solution Architect</li>
+                        </ul>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                            
+                        </div>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>2021-2024</span><br>B.E Computer Engg. Form SKN Sinhgad Institute Of Technology and Science,Lonavala</li>
+                            <li><span>2020</span><br>HSC(Science), From Mudhoji Highschool And Jr college ,Phaltan</li>
+                            <li><span>2018</span><br>SSC, From Shreemant Shivajiraje English Medium School And Jr College ,Phaltan </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+       
+       var tablinks= document.getElementsByClassName("tab-links");
+       var tabcontents= document.getElementsByClassName("tab-contents");
+       function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tab");
+        }
+        event.currentTarget.classlist.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+       }
+    </script>
+</body>
+</html>
